@@ -131,8 +131,11 @@ def audit(source, proposal):
         '{"operations":[{"call":true/false,"window":true/false,"return":true/false},'
         '...]} with three complete objects.\nFull report: ' + json.dumps(source, sort_keys=True) +
         '\nProposal: ' + json.dumps(proposal, sort_keys=True))
-    return (isinstance(value, dict) and set(value) == {'operations'} and isinstance(value['operations'], list)
+    accepted = (isinstance(value, dict) and set(value) == {'operations'} and isinstance(value['operations'], list)
             and len(value['operations']) == 3 and all(isinstance(row, dict) and set(row) == {'call', 'window', 'return'} and all(x is True for x in row.values()) for row in value['operations']))
+    if not accepted:
+        print('CHRONOCAS_AUDIT_REJECT', json.dumps(value, sort_keys=True))
+    return accepted
 
 
 def agree_error(result, run):
@@ -233,9 +236,15 @@ class ChronoCAS(gl.Contract):
             try:
                 own = run()
                 proposed = result.calldata
-                return (isinstance(proposed, dict) and set(proposed) == {'source', 'assessment'} and own['source'] == proposed['source']
-                        and valid_assessment(proposed['assessment']) and own['assessment'] == proposed['assessment'] and audit(own['source'], proposed['assessment']))
-            except Exception:
+                if not isinstance(proposed, dict) or set(proposed) != {'source', 'assessment'} or own['source'] != proposed['source'] or not valid_assessment(proposed['assessment']):
+                    print('CHRONOCAS_INVALID_PROPOSAL')
+                    return False
+                if own['assessment'] != proposed['assessment']:
+                    print('CHRONOCAS_EXTRACTION_DISAGREE', json.dumps({'own': own['assessment'], 'leader': proposed['assessment']}, sort_keys=True))
+                    return False
+                return audit(own['source'], proposed['assessment'])
+            except Exception as error:
+                print('CHRONOCAS_VALIDATOR_ERROR', str(error))
                 return False
         acquired = gl.vm.run_nondet_unsafe(run, validate)
         if any(json.loads(x)['source']['id'] == acquired['source']['id'] for x in self.reports):
