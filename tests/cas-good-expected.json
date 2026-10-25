@@ -1,0 +1,28 @@
+{
+  "operations": [
+    {
+      "kind": "CAS",
+      "start": 1,
+      "end": 5,
+      "expected": 0,
+      "update": 1,
+      "observed": "OK"
+    },
+    {
+      "kind": "CAS",
+      "start": 1,
+      "end": 5,
+      "expected": 0,
+      "update": 2,
+      "observed": "FAIL"
+    },
+    {
+      "kind": "READ",
+      "start": 1,
+      "end": 5,
+      "expected": "NA",
+      "update": "NA",
+      "observed": 1
+    }
+  ]
+}

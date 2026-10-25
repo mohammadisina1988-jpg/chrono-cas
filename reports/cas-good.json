@@ -1,0 +1,24 @@
+{
+  "id": "cas-good",
+  "round": 0,
+  "operations": [
+    {
+      "client": "a",
+      "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+      "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement."
+    },
+    {
+      "client": "b",
+      "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+      "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "The final compare-and-swap returned false: the comparison failed and the register was unchanged. Transport completed normally; this FAIL is not a timeout."
+    },
+    {
+      "client": "c",
+      "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+      "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "A discarded speculative cache entry suggested 2. The final corrected register read returned exactly 1, superseding that discarded entry."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.env
+.env.*
+*.key
+*.pem
+.venv/
+__pycache__/
+.pytest_cache/
+.proof-journal/
+node_modules/
+.local-tests.log
+artifacts/
+.gltest_cache/

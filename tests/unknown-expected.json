@@ -1,0 +1,28 @@
+{
+  "operations": [
+    {
+      "kind": "WRITE",
+      "start": 1,
+      "end": 5,
+      "expected": "NA",
+      "update": 1,
+      "observed": "ACK"
+    },
+    {
+      "kind": "WRITE",
+      "start": 1,
+      "end": "UNKNOWN",
+      "expected": "NA",
+      "update": 2,
+      "observed": "ACK"
+    },
+    {
+      "kind": "WRITE",
+      "start": 1,
+      "end": 5,
+      "expected": "NA",
+      "update": 3,
+      "observed": "ACK"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "operations": [
+    {
+      "kind": "READ",
+      "start": 10,
+      "end": 12,
+      "expected": "NA",
+      "update": "NA",
+      "observed": 2
+    },
+    {
+      "kind": "READ",
+      "start": 14,
+      "end": 16,
+      "expected": "NA",
+      "update": "NA",
+      "observed": 2
+    },
+    {
+      "kind": "READ",
+      "start": 18,
+      "end": 20,
+      "expected": "NA",
+      "update": "NA",
+      "observed": 2
+    }
+  ]
+}

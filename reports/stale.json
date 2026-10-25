@@ -1,0 +1,24 @@
+{
+  "id": "stale",
+  "round": 2,
+  "operations": [
+    {
+      "client": "a",
+      "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+      "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK."
+    },
+    {
+      "client": "b",
+      "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+      "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK."
+    },
+    {
+      "client": "c",
+      "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+      "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK."
+    }
+  ]
+}

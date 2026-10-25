@@ -1,0 +1,24 @@
+{
+  "id": "narrow",
+  "round": 1,
+  "operations": [
+    {
+      "client": "a",
+      "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+      "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry."
+    },
+    {
+      "client": "b",
+      "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+      "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry."
+    },
+    {
+      "client": "c",
+      "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+      "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval.",
+      "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry."
+    }
+  ]
+}
