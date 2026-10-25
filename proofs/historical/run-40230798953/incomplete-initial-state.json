@@ -1,0 +1,19 @@
+{
+  "configuration": {
+    "clients": [
+      "a",
+      "b",
+      "c"
+    ],
+    "initial": 0,
+    "repository": "mohammadisina1988-jpg/chrono-cas"
+  },
+  "cursor": {
+    "boundary": -1,
+    "round": 0,
+    "states": [
+      0
+    ]
+  },
+  "reports": []
+}

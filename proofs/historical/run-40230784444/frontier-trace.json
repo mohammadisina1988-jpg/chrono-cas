@@ -1,0 +1,4954 @@
+[
+  {
+    "label": "frontier-reject-hash",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json",
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    ],
+    "error": "[EXTERNAL] History commitment mismatch",
+    "transaction": "0xde9188a0d1490a438478f649e2fffa739dda111105475793a0dbf29b67c17a1b",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    }
+  },
+  {
+    "label": "frontier-audit-overlap",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json",
+      "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770"
+    ],
+    "name": "overlap",
+    "transaction": "0x1f0eaf16ca8ffff443545c069c391cc66ca78f951271f0e35481823b2bef1930",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "frontier-audit-narrow",
+    "method": "audit_report",
+    "args": [
+      "1",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json",
+      "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8"
+    ],
+    "name": "narrow",
+    "transaction": "0x1b9837aac639c1bc7584ca6cc0c122abb42b1669cd2b5e6692ba93eac12b7163",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 12,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 10,
+                "update": "NA"
+              },
+              {
+                "end": 16,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 14,
+                "update": "NA"
+              },
+              {
+                "end": 20,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 18,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "result": {
+            "edges": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ],
+            "final_states": [
+              2
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "client": "a",
+                "initial": 1,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "initial": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "client": "a",
+                "initial": 3,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  3
+                ],
+                "required": 3
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              }
+            ]
+          },
+          "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8",
+          "source": {
+            "id": "narrow",
+            "operations": [
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "a",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "b",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 1
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "frontier-audit-stale",
+    "method": "audit_report",
+    "args": [
+      "2",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/stale.json",
+      "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c"
+    ],
+    "name": "stale",
+    "transaction": "0x336b4e6312de860a6f751e726f3e9e22212c84e93d09d35d44ff21b5e9c45b6d",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 12,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 10,
+                "update": "NA"
+              },
+              {
+                "end": 16,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 14,
+                "update": "NA"
+              },
+              {
+                "end": 20,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 18,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "result": {
+            "edges": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ],
+            "final_states": [
+              2
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "client": "a",
+                "initial": 1,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "initial": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "client": "a",
+                "initial": 3,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  3
+                ],
+                "required": 3
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              }
+            ]
+          },
+          "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8",
+          "source": {
+            "id": "narrow",
+            "operations": [
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "a",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "b",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 1
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 12,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 10,
+                "update": "NA"
+              },
+              {
+                "end": 16,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 14,
+                "update": "NA"
+              },
+              {
+                "end": 20,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 18,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "result": {
+            "edges": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ],
+            "final_states": [
+              2
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "client": "a",
+                "initial": 1,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "initial": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "client": "a",
+                "initial": 3,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  3
+                ],
+                "required": 3
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              }
+            ]
+          },
+          "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8",
+          "source": {
+            "id": "narrow",
+            "operations": [
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "a",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "b",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 1
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "result": {
+            "issues": [
+              {
+                "client": "a",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "b",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "c",
+                "reason": "CUT_OVERLAP"
+              }
+            ],
+            "status": "INVALID_HISTORY"
+          },
+          "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c",
+          "source": {
+            "id": "stale",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 2
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/stale.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "frontier-reject-replay",
+    "method": "audit_report",
+    "args": [
+      "2",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json",
+      "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770"
+    ],
+    "error": "[EXPECTED] Report already recorded",
+    "transaction": "0x25949423c1b4c596063c50a44e09c1dece161293e4916051235c2d4f3bbb8756",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 12,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 10,
+                "update": "NA"
+              },
+              {
+                "end": 16,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 14,
+                "update": "NA"
+              },
+              {
+                "end": 20,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 18,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "result": {
+            "edges": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ],
+            "final_states": [
+              2
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "client": "a",
+                "initial": 1,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "initial": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "client": "a",
+                "initial": 3,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  3
+                ],
+                "required": 3
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              }
+            ]
+          },
+          "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8",
+          "source": {
+            "id": "narrow",
+            "operations": [
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "a",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "b",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 1
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "result": {
+            "issues": [
+              {
+                "client": "a",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "b",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "c",
+                "reason": "CUT_OVERLAP"
+              }
+            ],
+            "status": "INVALID_HISTORY"
+          },
+          "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c",
+          "source": {
+            "id": "stale",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 2
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/stale.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 12,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 10,
+                "update": "NA"
+              },
+              {
+                "end": 16,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 14,
+                "update": "NA"
+              },
+              {
+                "end": 20,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 18,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "result": {
+            "edges": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ],
+            "final_states": [
+              2
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "client": "a",
+                "initial": 1,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "initial": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "client": "a",
+                "initial": 3,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  3
+                ],
+                "required": 3
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              }
+            ]
+          },
+          "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8",
+          "source": {
+            "id": "narrow",
+            "operations": [
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "a",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "b",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 1
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "result": {
+            "issues": [
+              {
+                "client": "a",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "b",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "c",
+                "reason": "CUT_OVERLAP"
+              }
+            ],
+            "status": "INVALID_HISTORY"
+          },
+          "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c",
+          "source": {
+            "id": "stale",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 2
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/stale.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "frontier-reject-skip",
+    "method": "audit_report",
+    "args": [
+      "3",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json",
+      "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770"
+    ],
+    "error": "[EXPECTED] Expected current round",
+    "transaction": "0xc4604afca0fedd4d10879d5447a812995fde99fa31a3cf1324df5c1504c997b5",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 12,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 10,
+                "update": "NA"
+              },
+              {
+                "end": 16,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 14,
+                "update": "NA"
+              },
+              {
+                "end": 20,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 18,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "result": {
+            "edges": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ],
+            "final_states": [
+              2
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "client": "a",
+                "initial": 1,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "initial": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "client": "a",
+                "initial": 3,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  3
+                ],
+                "required": 3
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              }
+            ]
+          },
+          "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8",
+          "source": {
+            "id": "narrow",
+            "operations": [
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "a",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "b",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 1
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "result": {
+            "issues": [
+              {
+                "client": "a",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "b",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "c",
+                "reason": "CUT_OVERLAP"
+              }
+            ],
+            "status": "INVALID_HISTORY"
+          },
+          "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c",
+          "source": {
+            "id": "stale",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 2
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/stale.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770",
+          "source": {
+            "id": "overlap",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/overlap.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 12,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 10,
+                "update": "NA"
+              },
+              {
+                "end": 16,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 14,
+                "update": "NA"
+              },
+              {
+                "end": 20,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 18,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "result": {
+            "edges": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "a",
+                "c"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ],
+            "final_states": [
+              2
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "client": "a",
+                "initial": 1,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "initial": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "client": "a",
+                "initial": 3,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  3
+                ],
+                "required": 3
+              },
+              {
+                "blocked": [
+                  "b",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "c"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              },
+              {
+                "blocked": [
+                  "a",
+                  "b"
+                ],
+                "initial": 3,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "ORDER_BLOCKED",
+                "path": [
+                  3
+                ]
+              }
+            ]
+          },
+          "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8",
+          "source": {
+            "id": "narrow",
+            "operations": [
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "a",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 10; the final returned-completion marker is tick 12. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "b",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 14; the final returned-completion marker is tick 16. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 18; the final returned-completion marker is tick 20. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 1
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/narrow.json"
+        },
+        {
+          "after": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": 20,
+            "round": 2,
+            "states": [
+              2
+            ]
+          },
+          "result": {
+            "issues": [
+              {
+                "client": "a",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "b",
+                "reason": "CUT_OVERLAP"
+              },
+              {
+                "client": "c",
+                "reason": "CUT_OVERLAP"
+              }
+            ],
+            "status": "INVALID_HISTORY"
+          },
+          "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c",
+          "source": {
+            "id": "stale",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 2
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/stale.json"
+        }
+      ]
+    }
+  }
+]

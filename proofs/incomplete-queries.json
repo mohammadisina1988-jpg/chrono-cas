@@ -1,0 +1,502 @@
+[
+  {
+    "report": 0,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "unknown",
+      "result": {
+        "status": "INCOMPLETE",
+        "unknown": [
+          "b:end"
+        ]
+      },
+      "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "unknown",
+      "result": {
+        "status": "INCOMPLETE",
+        "unknown": [
+          "b:end"
+        ]
+      },
+      "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "unknown",
+      "result": {
+        "status": "INCOMPLETE",
+        "unknown": [
+          "b:end"
+        ]
+      },
+      "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "unknown",
+      "result": {
+        "status": "INCOMPLETE",
+        "unknown": [
+          "b:end"
+        ]
+      },
+      "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "resolved",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "resolved",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 1,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "resolved",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 2,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "resolved",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 3,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6"
+    }
+  }
+]

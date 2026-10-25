@@ -1,0 +1,2303 @@
+[
+  {
+    "label": "cas-reject-hash",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json",
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    ],
+    "error": "[EXTERNAL] History commitment mismatch",
+    "transaction": "0xe93a6fc4437ce0bcb768ac5f0e416994e2b6e40eab6b1c96c4feb7da9d979384",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    }
+  },
+  {
+    "label": "cas-audit-cas-bad",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json",
+      "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4"
+    ],
+    "name": "cas-bad",
+    "transaction": "0xc8743e1c1e18853a64843d45d3474e8f6187d05077e5eeb6056f5ab9d55316fa",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [],
+            "status": "VIOLATION",
+            "trials": [
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4",
+          "source": {
+            "id": "cas-bad",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "cas-audit-cas-good",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-good.json",
+      "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03"
+    ],
+    "name": "cas-good",
+    "transaction": "0x1decae9c5f826fcd4eafda1dda45422a683875976dce3474e1913b8f4b9d830f",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [],
+            "status": "VIOLATION",
+            "trials": [
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4",
+          "source": {
+            "id": "cas-bad",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [],
+            "status": "VIOLATION",
+            "trials": [
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4",
+          "source": {
+            "id": "cas-bad",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "FAIL",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 1,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03",
+          "source": {
+            "id": "cas-good",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned false: the comparison failed and the register was unchanged. Transport completed normally; this FAIL is not a timeout.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 2. The final corrected register read returned exactly 1, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-good.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "cas-reject-replay",
+    "method": "audit_report",
+    "args": [
+      "1",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json",
+      "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4"
+    ],
+    "error": "[EXPECTED] Report already recorded",
+    "transaction": "0x61844d490fdb709624c62ec350296ed4464b63fa3bf32489e53f42fd2e39ab07",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [],
+            "status": "VIOLATION",
+            "trials": [
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4",
+          "source": {
+            "id": "cas-bad",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "FAIL",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 1,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03",
+          "source": {
+            "id": "cas-good",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned false: the comparison failed and the register was unchanged. Transport completed normally; this FAIL is not a timeout.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 2. The final corrected register read returned exactly 1, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-good.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [],
+            "status": "VIOLATION",
+            "trials": [
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4",
+          "source": {
+            "id": "cas-bad",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "FAIL",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 1,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03",
+          "source": {
+            "id": "cas-good",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned false: the comparison failed and the register was unchanged. Transport completed normally; this FAIL is not a timeout.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 2. The final corrected register read returned exactly 1, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-good.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "cas-reject-skip",
+    "method": "audit_report",
+    "args": [
+      "2",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json",
+      "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4"
+    ],
+    "error": "[EXPECTED] Expected current round",
+    "transaction": "0x08bfdcd822f09b5fc2a93a2f771396ddae902a302b8f037dfaade45a7d5a106f",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [],
+            "status": "VIOLATION",
+            "trials": [
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4",
+          "source": {
+            "id": "cas-bad",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "FAIL",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 1,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03",
+          "source": {
+            "id": "cas-good",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned false: the comparison failed and the register was unchanged. Transport completed normally; this FAIL is not a timeout.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 2. The final corrected register read returned exactly 1, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-good.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 2,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [],
+            "status": "VIOLATION",
+            "trials": [
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  1
+                ],
+                "required": 1
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "a",
+                "initial": 0,
+                "observed": "OK",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0,
+                  2,
+                  2
+                ],
+                "required": "FAIL"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 2,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4",
+          "source": {
+            "id": "cas-bad",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 3. The final corrected register read returned exactly 2, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-bad.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "OK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": 0,
+                "kind": "CAS",
+                "observed": "FAIL",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "READ",
+                "observed": 1,
+                "start": 1,
+                "update": "NA"
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "b",
+                "initial": 0,
+                "observed": "FAIL",
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": "OK"
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              },
+              {
+                "client": "c",
+                "initial": 0,
+                "observed": 1,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "RETURN_MISMATCH",
+                "path": [
+                  0
+                ],
+                "required": 0
+              }
+            ]
+          },
+          "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03",
+          "source": {
+            "id": "cas-good",
+            "operations": [
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 1. No unconditional overwrite or retry was performed.",
+                "client": "a",
+                "return": "The final compare-and-swap returned true: the comparison succeeded and the replacement was applied. This is OK, not a mere transport acknowledgement.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "The final operation was compare-and-swap: compare the existing register value with 0; only on equality replace it with 2. No unconditional overwrite or retry was performed.",
+                "client": "b",
+                "return": "The final compare-and-swap returned false: the comparison failed and the register was unchanged. Transport completed normally; this FAIL is not a timeout.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative overwrite proposal was cancelled. The final completed operation was a register READ, with no comparison argument and no replacement value.",
+                "client": "c",
+                "return": "A discarded speculative cache entry suggested 2. The final corrected register read returned exactly 1, superseding that discarded entry.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/cas-good.json"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "repository": "mohammadisina1988-jpg/chrono-cas",
+  "source_sha256": "613cd24e0aea92f54548ae132178c5833e3dbb4a5a3d6fb1290704e4a8784cab",
+  "runs": [
+    {
+      "scenario": "frontier",
+      "workflow_run": "40232353266",
+      "url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40232353266"
+    },
+    {
+      "scenario": "cas",
+      "workflow_run": "40232359109",
+      "url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40232359109"
+    },
+    {
+      "scenario": "realtime",
+      "workflow_run": "40232365377",
+      "url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40232365377"
+    },
+    {
+      "scenario": "incomplete",
+      "workflow_run": "40232368586",
+      "url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40232368586"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "label": "incomplete-reject-hash",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json",
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    ],
+    "error": "[EXTERNAL] History commitment mismatch",
+    "transaction": "0x5a1f8484fcac5a8409b6d47d898cc0480e1032dfe4e6605ff899c593d8444d68",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    }
+  }
+]

@@ -1,0 +1,1661 @@
+[
+  {
+    "label": "incomplete-reject-hash",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json",
+      "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    ],
+    "error": "[EXTERNAL] History commitment mismatch",
+    "transaction": "0xe3842962b79bc11c215fb079f100c4b2ca3d5666d3bbb720a4dbdd24b5c3d490",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    }
+  },
+  {
+    "label": "incomplete-audit-unknown",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json",
+      "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0"
+    ],
+    "name": "unknown",
+    "transaction": "0xbb0354628442f7f14b7e0f3c236f21556bc2d0d504816382496fed524f52bf57",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": []
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": "UNKNOWN",
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "status": "INCOMPLETE",
+            "unknown": [
+              "b:end"
+            ]
+          },
+          "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0",
+          "source": {
+            "id": "unknown",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The final invocation marker is tick 1. The completion marker is missing. Tick five was only an assumed deadline, never a recorded response. The observer exported the report at tick 250; that export is not completion."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "incomplete-audit-resolved",
+    "method": "audit_report",
+    "args": [
+      "0",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/resolved.json",
+      "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6"
+    ],
+    "name": "resolved",
+    "transaction": "0x85ac09f1482f7b328c3ad89d7950f1e5d66342201b5ab3770cb19d1036509cdf",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": -1,
+        "round": 0,
+        "states": [
+          0
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": "UNKNOWN",
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "status": "INCOMPLETE",
+            "unknown": [
+              "b:end"
+            ]
+          },
+          "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0",
+          "source": {
+            "id": "unknown",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The final invocation marker is tick 1. The completion marker is missing. Tick five was only an assumed deadline, never a recorded response. The observer exported the report at tick 250; that export is not completion."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": "UNKNOWN",
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "status": "INCOMPLETE",
+            "unknown": [
+              "b:end"
+            ]
+          },
+          "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0",
+          "source": {
+            "id": "unknown",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The final invocation marker is tick 1. The completion marker is missing. Tick five was only an assumed deadline, never a recorded response. The observer exported the report at tick 250; that export is not completion."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6",
+          "source": {
+            "id": "resolved",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/resolved.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "incomplete-reject-replay",
+    "method": "audit_report",
+    "args": [
+      "1",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json",
+      "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0"
+    ],
+    "error": "[EXPECTED] Report already recorded",
+    "transaction": "0x7339c2d1282a5cae97a6284c0020497a9df2f3b0c7202721975ab8e4f8dab15a",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": "UNKNOWN",
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "status": "INCOMPLETE",
+            "unknown": [
+              "b:end"
+            ]
+          },
+          "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0",
+          "source": {
+            "id": "unknown",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The final invocation marker is tick 1. The completion marker is missing. Tick five was only an assumed deadline, never a recorded response. The observer exported the report at tick 250; that export is not completion."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6",
+          "source": {
+            "id": "resolved",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/resolved.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": "UNKNOWN",
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "status": "INCOMPLETE",
+            "unknown": [
+              "b:end"
+            ]
+          },
+          "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0",
+          "source": {
+            "id": "unknown",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The final invocation marker is tick 1. The completion marker is missing. Tick five was only an assumed deadline, never a recorded response. The observer exported the report at tick 250; that export is not completion."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6",
+          "source": {
+            "id": "resolved",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/resolved.json"
+        }
+      ]
+    }
+  },
+  {
+    "label": "incomplete-reject-skip",
+    "method": "audit_report",
+    "args": [
+      "2",
+      "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json",
+      "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0"
+    ],
+    "error": "[EXPECTED] Expected current round",
+    "transaction": "0x11bca20871fc1138b3219a86d411165bf5ebae9c2339b71594f1ee9f85e6bf15",
+    "state_before": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": "UNKNOWN",
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "status": "INCOMPLETE",
+            "unknown": [
+              "b:end"
+            ]
+          },
+          "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0",
+          "source": {
+            "id": "unknown",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The final invocation marker is tick 1. The completion marker is missing. Tick five was only an assumed deadline, never a recorded response. The observer exported the report at tick 250; that export is not completion."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6",
+          "source": {
+            "id": "resolved",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/resolved.json"
+        }
+      ]
+    },
+    "state": {
+      "configuration": {
+        "clients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "initial": 0,
+        "repository": "mohammadisina1988-jpg/chrono-cas"
+      },
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1,
+          2,
+          3
+        ]
+      },
+      "reports": [
+        {
+          "after": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": "UNKNOWN",
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "status": "INCOMPLETE",
+            "unknown": [
+              "b:end"
+            ]
+          },
+          "sha256": "d586122f4da0d1458c8b5879eeeb5cba7ee968b25848db308817d803a148bff0",
+          "source": {
+            "id": "unknown",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The final invocation marker is tick 1. The completion marker is missing. Tick five was only an assumed deadline, never a recorded response. The observer exported the report at tick 250; that export is not completion."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/unknown.json"
+        },
+        {
+          "after": {
+            "boundary": 5,
+            "round": 1,
+            "states": [
+              1,
+              2,
+              3
+            ]
+          },
+          "assessment": {
+            "operations": [
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 1
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 2
+              },
+              {
+                "end": 5,
+                "expected": "NA",
+                "kind": "WRITE",
+                "observed": "ACK",
+                "start": 1,
+                "update": 3
+              }
+            ]
+          },
+          "before": {
+            "boundary": -1,
+            "round": 0,
+            "states": [
+              0
+            ]
+          },
+          "result": {
+            "edges": [],
+            "final_states": [
+              1,
+              2,
+              3
+            ],
+            "status": "LINEARIZABLE",
+            "trials": [
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "a",
+                  "c",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  1,
+                  3,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "a",
+                  "c"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "b",
+                  "c",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  2,
+                  3,
+                  1
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "a",
+                  "b"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              },
+              {
+                "initial": 0,
+                "order": [
+                  "c",
+                  "b",
+                  "a"
+                ],
+                "outcome": "PASS",
+                "path": [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              }
+            ]
+          },
+          "sha256": "fc0764f665273118b57cf2424817b375f16db173bbff6a280787df0e05d327f6",
+          "source": {
+            "id": "resolved",
+            "operations": [
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 1; it had no expected comparison value.",
+                "client": "a",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 2; it had no expected comparison value.",
+                "client": "b",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              },
+              {
+                "call": "A tentative conditional exchange was cancelled. The final operation was an unconditional WRITE of register value 3; it had no expected comparison value.",
+                "client": "c",
+                "return": "The completed unconditional write was acknowledged. This acknowledgement returns no register value and is recorded as ACK.",
+                "window": "The shared-clock invocation marker is tick 1; the final returned-completion marker is tick 5. A later observer exported the record at tick 250, which is not part of the operation interval."
+              }
+            ],
+            "round": 0
+          },
+          "url": "https://raw.githubusercontent.com/mohammadisina1988-jpg/chrono-cas/7bf5294d2916a691a557d27ea1ec37a0f8032bf8/reports/resolved.json"
+        }
+      ]
+    }
+  }
+]

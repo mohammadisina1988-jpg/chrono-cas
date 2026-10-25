@@ -1,0 +1,16 @@
+[
+  {
+    "id": "realtime",
+    "network": "studionet",
+    "chain_id": 61999,
+    "contract": "0x56Ca600743E5B3aB7cb5C6ff48742CDB8Da7b92e",
+    "deployment": "0x93d9c650fff7a87bf4be53b0947a79af9ff1551431ae130696472f195e84268c",
+    "caller": "0xe9ed92dfe1b619dd46e14790697345750199e910",
+    "args": [
+      "mohammadisina1988-jpg/chrono-cas",
+      0
+    ],
+    "fixture_revision": "7bf5294d2916a691a557d27ea1ec37a0f8032bf8",
+    "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448"
+  }
+]

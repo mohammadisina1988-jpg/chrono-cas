@@ -1,0 +1,108 @@
+{
+  "scope": "cas",
+  "mode": "fresh-rpc-and-state",
+  "verified_at": "2026-10-25T20:54:25.923Z",
+  "source_sha256": "613cd24e0aea92f54548ae132178c5833e3dbb4a5a3d6fb1290704e4a8784cab",
+  "instances": [
+    {
+      "id": "cas",
+      "contract": "0x6998BeE811479679C37bB72a5d8c861FfA6e695e",
+      "statuses": [
+        "VIOLATION",
+        "LINEARIZABLE"
+      ],
+      "cursor": {
+        "boundary": 5,
+        "round": 1,
+        "states": [
+          1
+        ]
+      },
+      "counterfactuals": 8
+    }
+  ],
+  "transactions": [
+    {
+      "label": "cas-deployment",
+      "hash": "0x3357c8ec726725e8d4926383f3f1f334e9b2f977722fda9114f23f8fdf572a06",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "cas-reject-hash",
+      "hash": "0xe93a6fc4437ce0bcb768ac5f0e416994e2b6e40eab6b1c96c4feb7da9d979384",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "cas-audit-cas-bad",
+      "hash": "0xc8743e1c1e18853a64843d45d3474e8f6187d05077e5eeb6056f5ab9d55316fa",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "cas-audit-cas-good",
+      "hash": "0x1decae9c5f826fcd4eafda1dda45422a683875976dce3474e1913b8f4b9d830f",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "cas-reject-replay",
+      "hash": "0x61844d490fdb709624c62ec350296ed4464b63fa3bf32489e53f42fd2e39ab07",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "cas-reject-skip",
+      "hash": "0x08bfdcd822f09b5fc2a93a2f771396ddae902a302b8f037dfaade45a7d5a106f",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    }
+  ],
+  "transaction_calldata_checked": true,
+  "rejection_bytes_checked": true,
+  "independent_prefix_state_dp": true,
+  "live_state_match": true
+}

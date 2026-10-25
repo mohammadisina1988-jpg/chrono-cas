@@ -1,0 +1,122 @@
+{
+  "scope": "frontier",
+  "mode": "fresh-rpc-and-state",
+  "verified_at": "2026-10-25T20:35:31.716Z",
+  "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448",
+  "instances": [
+    {
+      "id": "frontier",
+      "contract": "0x8E926dd01Ccc977260D1fE1e4ec0ef572c796600",
+      "statuses": [
+        "LINEARIZABLE",
+        "LINEARIZABLE",
+        "INVALID_HISTORY"
+      ],
+      "cursor": {
+        "boundary": 20,
+        "round": 2,
+        "states": [
+          2
+        ]
+      },
+      "counterfactuals": 12
+    }
+  ],
+  "transactions": [
+    {
+      "label": "frontier-deployment",
+      "hash": "0xa6cb54c01441522c0384cba026304700ff1f954c166e5c0faf1eedc97d428bf7",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "frontier-reject-hash",
+      "hash": "0xde9188a0d1490a438478f649e2fffa739dda111105475793a0dbf29b67c17a1b",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "frontier-audit-overlap",
+      "hash": "0x1f0eaf16ca8ffff443545c069c391cc66ca78f951271f0e35481823b2bef1930",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "frontier-audit-narrow",
+      "hash": "0x1b9837aac639c1bc7584ca6cc0c122abb42b1669cd2b5e6692ba93eac12b7163",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "frontier-audit-stale",
+      "hash": "0x336b4e6312de860a6f751e726f3e9e22212c84e93d09d35d44ff21b5e9c45b6d",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "frontier-reject-replay",
+      "hash": "0x25949423c1b4c596063c50a44e09c1dece161293e4916051235c2d4f3bbb8756",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    },
+    {
+      "label": "frontier-reject-skip",
+      "hash": "0xc4604afca0fedd4d10879d5447a812995fde99fa31a3cf1324df5c1504c997b5",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "round_count": "1",
+      "rotation_count": 0
+    }
+  ],
+  "transaction_calldata_checked": true,
+  "rejection_bytes_checked": true,
+  "independent_prefix_state_dp": true,
+  "live_state_match": true
+}

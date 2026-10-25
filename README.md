@@ -2,6 +2,8 @@
 
 **Consensus interpretation of concurrent reports, exhaustive linearizability witnesses, and an ambiguity-preserving streaming register frontier.**
 
+[Deployed StudioNet contract](https://explorer-studio.genlayer.com/address/0xA59933825BbfC63e44b79724Fd16cCdd62DB254D) · [25 final-source receipts and four scenarios](proofs/README.md) · [Ready submission text](SUBMISSION.md). Lint, 209 direct tests, seven transport tests, 36 live counterfactual views and local receipt/state replay passed. [Earlier attempts](proofs/historical/README.md), including two rejected missing-time consensus attempts, remain separate from the primary totals.
+
 ChronoCAS audits published candidate histories of a bounded atomic register. The contract independently fetches complete commit-pinned reports, interprets each client's call/interval/return, compares every normalized field across leader and validators and separately audits all full clauses. It then checks all six operation orders from every possible prior value, respecting reported real-time precedence and actual READ/WRITE/CAS semantics.
 
 Every legal final value survives into the next round. Impossible, incomplete or overlapping-cut reports cannot advance the round. A corrected candidate must be evaluated in the same round; later rounds cannot skip it. All source interpretations, before/after cursors, successful witness paths and failed-order diagnostics remain immutable. There is no administrator override or graph-edit workflow.
@@ -10,6 +12,7 @@ Every legal final value survives into the next round. Impossible, incomplete or 
 
 - [Pinned GenVM contract](contracts/chrono_cas.py)
 - [Architecture and model boundary](docs/architecture.md)
+- [Trust, concurrency and operational review notes](docs/review.md)
 - [Synthetic concurrent reports](reports)
 - [Independent prefix-DP tests](tests/direct)
 - [CLI proof driver](scripts/live-proof.cjs) and [receipt/state verifier](scripts/verify-proofs.cjs)

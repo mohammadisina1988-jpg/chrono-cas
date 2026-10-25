@@ -1,0 +1,11 @@
+{
+  "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448",
+  "hashes": {
+    "cas-deployment": "0x7d606f38e9bfee0c2649501ae53c337f4f4807a5c2c9a8020bbd66189ddebef6",
+    "cas-reject-hash": "0x248a0b2129311a4fac7ec4cdc6a4f52583335173c1d44b3904c2811a8c83e32b",
+    "cas-audit-cas-bad": "0x5508da8a8f13f4d8ce5f551e4c07e4b0649229e24aa3f3ca6da5a6913d86e847",
+    "cas-audit-cas-good": "0xdc4dda970df1d70bb5e45fc82fd08ea94bf93cc8d0c99d16ac2cdb180d92842a",
+    "cas-reject-replay": "0x10539a45acf723fed2d08909dd2e65950c6d720beca3a0da837185c169423cb4",
+    "cas-reject-skip": "0x6dfe0614e72babb7d1694403fdf7668a9e66684a03b57323db24cdb5b55ed127"
+  }
+}

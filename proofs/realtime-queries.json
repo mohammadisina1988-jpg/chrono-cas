@@ -1,0 +1,944 @@
+[
+  {
+    "report": 0,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "realtime-bad",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 0,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 0,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 0,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 0,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          }
+        ]
+      },
+      "sha256": "8748b425d170f599b5166d656abb91b80288c7b8328fe6fe1781110ef5edddcf"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "realtime-bad",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 1,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 1,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 1,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "8748b425d170f599b5166d656abb91b80288c7b8328fe6fe1781110ef5edddcf"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "realtime-bad",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 2,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 2,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 2,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 2,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 2,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          }
+        ]
+      },
+      "sha256": "8748b425d170f599b5166d656abb91b80288c7b8328fe6fe1781110ef5edddcf"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "realtime-bad",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 3,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 3,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 3,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 3,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 3,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 3,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          }
+        ]
+      },
+      "sha256": "8748b425d170f599b5166d656abb91b80288c7b8328fe6fe1781110ef5edddcf"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "realtime-good",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 0,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 0,
+            "observed": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              1,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "initial": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 1,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              0
+            ],
+            "required": 0
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": 0
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": 0
+          }
+        ]
+      },
+      "sha256": "fb09993358da4662ff351ba2b1b547bdb736dbfb20ef4c5fc237f671e2417bdc"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "realtime-good",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": 0,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": 0,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": 0,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1
+            ],
+            "required": 1
+          }
+        ]
+      },
+      "sha256": "fb09993358da4662ff351ba2b1b547bdb736dbfb20ef4c5fc237f671e2417bdc"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "realtime-good",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2,
+              1,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": 2
+          },
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": 0,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": 2
+          },
+          {
+            "client": "c",
+            "initial": 2,
+            "observed": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": 2
+          },
+          {
+            "client": "c",
+            "initial": 2,
+            "observed": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": 2
+          }
+        ]
+      },
+      "sha256": "fb09993358da4662ff351ba2b1b547bdb736dbfb20ef4c5fc237f671e2417bdc"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "realtime-good",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 3,
+            "observed": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 3,
+            "observed": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3,
+              1,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "b",
+            "initial": 3,
+            "observed": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          },
+          {
+            "client": "b",
+            "initial": 3,
+            "observed": 0,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          },
+          {
+            "client": "c",
+            "initial": 3,
+            "observed": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          },
+          {
+            "client": "c",
+            "initial": 3,
+            "observed": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          }
+        ]
+      },
+      "sha256": "fb09993358da4662ff351ba2b1b547bdb736dbfb20ef4c5fc237f671e2417bdc"
+    }
+  }
+]

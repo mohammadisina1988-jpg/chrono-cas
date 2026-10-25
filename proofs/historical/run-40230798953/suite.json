@@ -1,0 +1,16 @@
+[
+  {
+    "id": "incomplete",
+    "network": "studionet",
+    "chain_id": 61999,
+    "contract": "0xb8Ca913f6a33b48F5fD0aC276e9A27eba8f14575",
+    "deployment": "0xd27a47d09493bcb85589ce825cc22c3d0690e2a0705672a367c363b1c76539a1",
+    "caller": "0xdd384629100903160921e51ee0fd21e92422ec71",
+    "args": [
+      "mohammadisina1988-jpg/chrono-cas",
+      0
+    ],
+    "fixture_revision": "7bf5294d2916a691a557d27ea1ec37a0f8032bf8",
+    "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448"
+  }
+]

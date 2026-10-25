@@ -1,0 +1,1044 @@
+[
+  {
+    "report": 0,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "overlap",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "overlap",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 1,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              1,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "overlap",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 2,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 2,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "overlap",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1,
+          2,
+          3
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 3,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              1,
+              3,
+              2
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "initial": 3,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "PASS",
+            "path": [
+              3,
+              3,
+              2,
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "3b31d0e284737341d1070448e5dbd29a3d02fcf3fa064abab54275a382fa9770"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "narrow",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 0,
+            "observed": 2,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": 0
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 0,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 0,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 0,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 0,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              0
+            ]
+          }
+        ]
+      },
+      "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "narrow",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": 2,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": 1
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 1,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 1,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 1,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              1
+            ]
+          }
+        ]
+      },
+      "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "narrow",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [
+          2
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 2,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 2,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 2,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 2,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 2,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 2,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              2
+            ]
+          }
+        ]
+      },
+      "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "narrow",
+      "result": {
+        "edges": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 3,
+            "observed": 2,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          },
+          {
+            "blocked": [
+              "b",
+              "c"
+            ],
+            "initial": 3,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 3,
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 3,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "c"
+            ],
+            "initial": 3,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          },
+          {
+            "blocked": [
+              "a",
+              "b"
+            ],
+            "initial": 3,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "ORDER_BLOCKED",
+            "path": [
+              3
+            ]
+          }
+        ]
+      },
+      "sha256": "f707fd28ce8ea0d6c360aecdd7fd76f190306ed13c4be2ceb8dad6b3dfe64cc8"
+    }
+  },
+  {
+    "report": 2,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "stale",
+      "result": {
+        "issues": [
+          {
+            "client": "a",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "b",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "c",
+            "reason": "CUT_OVERLAP"
+          }
+        ],
+        "status": "INVALID_HISTORY"
+      },
+      "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c"
+    }
+  },
+  {
+    "report": 2,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "stale",
+      "result": {
+        "issues": [
+          {
+            "client": "a",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "b",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "c",
+            "reason": "CUT_OVERLAP"
+          }
+        ],
+        "status": "INVALID_HISTORY"
+      },
+      "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c"
+    }
+  },
+  {
+    "report": 2,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "stale",
+      "result": {
+        "issues": [
+          {
+            "client": "a",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "b",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "c",
+            "reason": "CUT_OVERLAP"
+          }
+        ],
+        "status": "INVALID_HISTORY"
+      },
+      "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c"
+    }
+  },
+  {
+    "report": 2,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "stale",
+      "result": {
+        "issues": [
+          {
+            "client": "a",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "b",
+            "reason": "CUT_OVERLAP"
+          },
+          {
+            "client": "c",
+            "reason": "CUT_OVERLAP"
+          }
+        ],
+        "status": "INVALID_HISTORY"
+      },
+      "sha256": "be5a466b9d5957f0576ed23e81b84ee7f019e40147bf8d4e45aa5cf80a7c076c"
+    }
+  }
+]

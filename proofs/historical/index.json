@@ -1,0 +1,301 @@
+{
+  "scope": "historical-only",
+  "note": "These earlier attempts are separate from the final source-matched primary set. A retained earlier hosted report describes checks at its own time; archival inspection is not a new live RPC pass.",
+  "runs": [
+    {
+      "run": "40230784444",
+      "scenario": "frontier",
+      "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448",
+      "workflow_url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40230784444",
+      "has_hosted_fresh_report": true,
+      "transactions": [
+        {
+          "label": "frontier-audit-narrow",
+          "hash": "0x1b9837aac639c1bc7584ca6cc0c122abb42b1669cd2b5e6692ba93eac12b7163",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "frontier-audit-overlap",
+          "hash": "0x1f0eaf16ca8ffff443545c069c391cc66ca78f951271f0e35481823b2bef1930",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "frontier-audit-stale",
+          "hash": "0x336b4e6312de860a6f751e726f3e9e22212c84e93d09d35d44ff21b5e9c45b6d",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "frontier-deployment",
+          "hash": "0xa6cb54c01441522c0384cba026304700ff1f954c166e5c0faf1eedc97d428bf7",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "frontier-reject-hash",
+          "hash": "0xde9188a0d1490a438478f649e2fffa739dda111105475793a0dbf29b67c17a1b",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "frontier-reject-replay",
+          "hash": "0x25949423c1b4c596063c50a44e09c1dece161293e4916051235c2d4f3bbb8756",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "frontier-reject-skip",
+          "hash": "0xc4604afca0fedd4d10879d5447a812995fde99fa31a3cf1324df5c1504c997b5",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        }
+      ]
+    },
+    {
+      "run": "40230791751",
+      "scenario": "cas",
+      "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448",
+      "workflow_url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40230791751",
+      "has_hosted_fresh_report": true,
+      "transactions": [
+        {
+          "label": "cas-audit-cas-bad",
+          "hash": "0x5508da8a8f13f4d8ce5f551e4c07e4b0649229e24aa3f3ca6da5a6913d86e847",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "cas-audit-cas-good",
+          "hash": "0xdc4dda970df1d70bb5e45fc82fd08ea94bf93cc8d0c99d16ac2cdb180d92842a",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "cas-deployment",
+          "hash": "0x7d606f38e9bfee0c2649501ae53c337f4f4807a5c2c9a8020bbd66189ddebef6",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "cas-reject-hash",
+          "hash": "0x248a0b2129311a4fac7ec4cdc6a4f52583335173c1d44b3904c2811a8c83e32b",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "cas-reject-replay",
+          "hash": "0x10539a45acf723fed2d08909dd2e65950c6d720beca3a0da837185c169423cb4",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "cas-reject-skip",
+          "hash": "0x6dfe0614e72babb7d1694403fdf7668a9e66684a03b57323db24cdb5b55ed127",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        }
+      ]
+    },
+    {
+      "run": "40230795947",
+      "scenario": "realtime",
+      "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448",
+      "workflow_url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40230795947",
+      "has_hosted_fresh_report": true,
+      "transactions": [
+        {
+          "label": "realtime-audit-realtime-bad",
+          "hash": "0x90e15c0cdfc8bfdaae9f3ce04705dce3c4787747544b189a3acd962bba965eb4",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "realtime-audit-realtime-good",
+          "hash": "0x8668d2d21c389fe40740d5119d24c8ed6c95e23e2dbfc2d38de2d17cb488417d",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "realtime-deployment",
+          "hash": "0x93d9c650fff7a87bf4be53b0947a79af9ff1551431ae130696472f195e84268c",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "realtime-reject-hash",
+          "hash": "0xa0c13b4eb34da1146017ec94d72a1acc0cb015cf65c64e73215c9454db72d7cf",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "realtime-reject-replay",
+          "hash": "0xab536769c0fbf9546b6fb4d0467bfdb1edbc2acbac614600e774276e4f6a2474",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "realtime-reject-skip",
+          "hash": "0x144b782d568005e70d8e8c0b35f412fae0992137aa7ab5efb23ce7260725bf7f",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        }
+      ]
+    },
+    {
+      "run": "40230798953",
+      "scenario": "incomplete",
+      "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448",
+      "workflow_url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40230798953",
+      "has_hosted_fresh_report": false,
+      "transactions": [
+        {
+          "label": "incomplete-audit-unknown",
+          "hash": "0x3b8020dc1b2ee278567c25203401adab49ce6942d10612d34f25ccc06f422662",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_DISAGREE",
+          "agree": 0,
+          "disagree": 3,
+          "idle": 2
+        },
+        {
+          "label": "incomplete-deployment",
+          "hash": "0xd27a47d09493bcb85589ce825cc22c3d0690e2a0705672a367c363b1c76539a1",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "incomplete-reject-hash",
+          "hash": "0x9761766a1a92266b02e1ca31a4f0be0a8640aa55fc5fb99d2a96abeb2c9bdcac",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        }
+      ]
+    },
+    {
+      "run": "40231532688",
+      "scenario": "incomplete",
+      "source_sha256": "1d3691530f345818b532741471a419b2d6c13a7a3816628a6c4c134ddba33910",
+      "workflow_url": "https://github.com/mohammadisina1988-jpg/chrono-cas/actions/runs/40231532688",
+      "has_hosted_fresh_report": false,
+      "transactions": [
+        {
+          "label": "incomplete-audit-unknown",
+          "hash": "0x1c8f2ec724add230ed06095a9ef53576c0ccbbb6df9c28ca4c91a55bce037395",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_DISAGREE",
+          "agree": 0,
+          "disagree": 3,
+          "idle": 2
+        },
+        {
+          "label": "incomplete-deployment",
+          "hash": "0xafd9d1e19b063f8e7aaf219f02fb3fb68075bdda0f82cc175e37634b2c635c7b",
+          "status": "FINALIZED",
+          "execution": "SUCCESS",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        },
+        {
+          "label": "incomplete-reject-hash",
+          "hash": "0x5a1f8484fcac5a8409b6d47d898cc0480e1032dfe4e6605ff899c593d8444d68",
+          "status": "FINALIZED",
+          "execution": "ERROR",
+          "result": "MAJORITY_AGREE",
+          "agree": 3,
+          "disagree": 0,
+          "idle": 2
+        }
+      ]
+    }
+  ]
+}

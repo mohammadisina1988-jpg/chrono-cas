@@ -1,0 +1,869 @@
+[
+  {
+    "report": 0,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "cas-bad",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "b",
+            "initial": 0,
+            "observed": "OK",
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 2,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "a",
+            "initial": 0,
+            "observed": "OK",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 0,
+            "observed": "OK",
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0,
+              2,
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 2,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": 0
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 2,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": 0
+          }
+        ]
+      },
+      "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "cas-bad",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "b",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "c",
+            "initial": 1,
+            "observed": 2,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": 1
+          },
+          {
+            "client": "c",
+            "initial": 1,
+            "observed": 2,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": 1
+          }
+        ]
+      },
+      "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "cas-bad",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2,
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "b",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2,
+              2
+            ],
+            "required": "FAIL"
+          }
+        ]
+      },
+      "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4"
+    }
+  },
+  {
+    "report": 0,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "cas-bad",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 3,
+            "observed": "OK",
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 3,
+            "observed": "OK",
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "b",
+            "initial": 3,
+            "observed": "OK",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "b",
+            "initial": 3,
+            "observed": "OK",
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "c",
+            "initial": 3,
+            "observed": 2,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          },
+          {
+            "client": "c",
+            "initial": 3,
+            "observed": 2,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          }
+        ]
+      },
+      "sha256": "bd2edd3703c5dd539c6a15847bac21870b3950b5d62d1f6112eda0f7d8215dc4"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 0,
+    "result": {
+      "initial": 0,
+      "report": "cas-good",
+      "result": {
+        "edges": [],
+        "final_states": [
+          1
+        ],
+        "status": "LINEARIZABLE",
+        "trials": [
+          {
+            "initial": 0,
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "initial": 0,
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "PASS",
+            "path": [
+              0,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "client": "b",
+            "initial": 0,
+            "observed": "FAIL",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": "OK"
+          },
+          {
+            "client": "b",
+            "initial": 0,
+            "observed": "FAIL",
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": "OK"
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": 0
+          },
+          {
+            "client": "c",
+            "initial": 0,
+            "observed": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              0
+            ],
+            "required": 0
+          }
+        ]
+      },
+      "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 1,
+    "result": {
+      "initial": 1,
+      "report": "cas-good",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1,
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 1,
+            "observed": "OK",
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              1,
+              1,
+              1
+            ],
+            "required": "FAIL"
+          }
+        ]
+      },
+      "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 2,
+    "result": {
+      "initial": 2,
+      "report": "cas-good",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 2,
+            "observed": "OK",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2,
+              2
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "c",
+            "initial": 2,
+            "observed": 1,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2,
+              2
+            ],
+            "required": 2
+          },
+          {
+            "client": "c",
+            "initial": 2,
+            "observed": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": 2
+          },
+          {
+            "client": "c",
+            "initial": 2,
+            "observed": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              2
+            ],
+            "required": 2
+          }
+        ]
+      },
+      "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03"
+    }
+  },
+  {
+    "report": 1,
+    "initial": 3,
+    "result": {
+      "initial": 3,
+      "report": "cas-good",
+      "result": {
+        "edges": [],
+        "final_states": [],
+        "status": "VIOLATION",
+        "trials": [
+          {
+            "client": "a",
+            "initial": 3,
+            "observed": "OK",
+            "order": [
+              "a",
+              "b",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 3,
+            "observed": "OK",
+            "order": [
+              "a",
+              "c",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "a",
+            "initial": 3,
+            "observed": "OK",
+            "order": [
+              "b",
+              "a",
+              "c"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3,
+              3
+            ],
+            "required": "FAIL"
+          },
+          {
+            "client": "c",
+            "initial": 3,
+            "observed": 1,
+            "order": [
+              "b",
+              "c",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3,
+              3
+            ],
+            "required": 3
+          },
+          {
+            "client": "c",
+            "initial": 3,
+            "observed": 1,
+            "order": [
+              "c",
+              "a",
+              "b"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          },
+          {
+            "client": "c",
+            "initial": 3,
+            "observed": 1,
+            "order": [
+              "c",
+              "b",
+              "a"
+            ],
+            "outcome": "RETURN_MISMATCH",
+            "path": [
+              3
+            ],
+            "required": 3
+          }
+        ]
+      },
+      "sha256": "b8625e6596b748984c86fd2483c77cd6dd2aab3548477ea87ac676673480df03"
+    }
+  }
+]

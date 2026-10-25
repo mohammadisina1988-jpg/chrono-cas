@@ -1,0 +1,16 @@
+[
+  {
+    "id": "frontier",
+    "network": "studionet",
+    "chain_id": 61999,
+    "contract": "0x8E926dd01Ccc977260D1fE1e4ec0ef572c796600",
+    "deployment": "0xa6cb54c01441522c0384cba026304700ff1f954c166e5c0faf1eedc97d428bf7",
+    "caller": "0x72fd8008554adc3ab7f47f2347336dbd4710d03b",
+    "args": [
+      "mohammadisina1988-jpg/chrono-cas",
+      0
+    ],
+    "fixture_revision": "7bf5294d2916a691a557d27ea1ec37a0f8032bf8",
+    "source_sha256": "318b50e391c1c8249eaeeb80a3072785b10f17dc00a667b8b9018334654fb448"
+  }
+]
