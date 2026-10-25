@@ -93,6 +93,26 @@ def test_repair_retains_unknown_instead_of_inventing_completion(direct_vm,direct
     assert c.get_state()['cursor']['round'] == 0
 
 
+@pytest.mark.parametrize('field,value',[('end',5),('end',250),('observed','UNKNOWN')])
+def test_lost_time_does_not_authorize_invented_time_or_erasure_of_known_ack(direct_vm,direct_deploy,field,value):
+    c = deploy(direct_deploy)
+    acquired = acquire(c,direct_vm,'unknown')
+    assert acquired['assessment']['operations'][1]['observed'] == 'ACK'
+    assert acquired['assessment']['operations'][1]['end'] == 'UNKNOWN'
+    a = answer('unknown')
+    a['operations'][1][field] = value
+    assert direct_vm.run_validator(leader_result={'source':acquired['source'],'assessment':a}) is False
+
+
+def test_faithful_unknown_still_requires_all_substantive_audit_flags(direct_vm,direct_deploy):
+    c = deploy(direct_deploy)
+    acquire(c,direct_vm,'unknown')
+    audit = {'operations':[{'call':True,'window':True,'return':True} for _ in range(3)]}
+    audit['operations'][1]['window'] = False
+    mocks(direct_vm,'unknown',audit=audit)
+    assert direct_vm.run_validator() is False
+
+
 @pytest.mark.parametrize('mutation',['round','roster','clause','duplicate','oversize','json'])
 def test_invalid_acquired_source_preserves_cursor(direct_vm,direct_deploy,mutation):
     c = deploy(direct_deploy)
